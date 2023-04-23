@@ -4,7 +4,7 @@
 body{
     background: hsl(270, 11%, 96%); 
     font-family: 'Montserrat', sans-serif;
-    color: #ba35cc;
+    color: #8b0d9c;
 }
 
 #Contenedor{
@@ -21,14 +21,15 @@ body{
       0 10px 10px rgba(0,0,0,0.22);
 } 
 #calculadora{
-    background: white;
+    background: rgb(227, 172, 235);
     /* Hacer que los divs queden lado a lado */
     width:  50%;
     height: 100%;
     float: left;
 }
+
 #Detalle{
-    background: #d460ca;
+    background: #ba5dd4;
     /* Hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
@@ -49,6 +50,8 @@ body{
 input{
 
     width: 70%;
+    font-weight: bold;
+    border-radius: 10px;
     padding: 12px 15px;
     /*quita el borde*/
     border: none;
@@ -61,9 +64,9 @@ button {
       /*espacio adentro*/
       padding: 12px 45px;
       border-radius: 30px;
-      background-color: #ec6fea;
+      background-color:  #ba5dd4;
       /*color de borde*/
-      border: 1px solid #e98ceb;
+      border: 1px solid #ede2ed;
       /*color de la letra*/
       color: #FFFFFF;
       /*Volver todo a mayuscula*/
@@ -79,7 +82,7 @@ button {
 	transform: scale(0.95);
 }
 #error{
-    background-color: #d460ca;
+    background-color: #ba5dd4;
     padding: 5px 15px;
     color: rgb(225, 213, 225);
     font-weight: bold;
@@ -87,11 +90,12 @@ button {
 }
 
 .resultado{
-    background-color: #e25fe4;
-    border-radius: 0cqw;
+    background-color:#ba5dd4;
     color: #f6f6f6;
-    font-weight:500;
+    border-radius: 10px;
     font-size: 25px;
-    margin-bottom: 5px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
     display: none;
 }
