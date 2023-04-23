@@ -4,29 +4,49 @@ const ERROR = document.getElementById('error');
 const FLUJO= document.getElementById('flu');
 const MANTENIMIENTO = document.getElementById('man');
 const MEDIOMANTENIMIENTO= document.getElementById('medio');
+const ENTRADA= document.getElementById('peso');
+
 //Hacer que al presionar el boton se ejecuta una funcion-- usa una funcion anonima
 CALCULAR.addEventListener('click', () => {
+    calculoTotal(); 
+    //Borra el input al ingresar
+    ENTRADA.value='';
+})
+ENTRADA.addEventListener('keydown', (event) =>{
+    if (event.key === 'Enter') {
+    calculoTotal();
+    ENTRADA.value='';
+ }})
+/*Calculo total para poder llamar en los dos eventos del click al boton y al presionar el enter */
+function calculoTotal(){
     const PESO = document.getElementById('peso').value;
     if (PESO >0){
-        ERROR.style.display = 'none'
+        ERROR.style.display = 'none';
         let flujo= calcFlujo(PESO);
-        FLUJO.innerHTML = flujo + ' cc';
+        FLUJO.innerHTML = 'Volumen diario: '+ flujo + ' cc';
         FLUJO.style.display = 'block';
         /*Verificar si el peso es mayor a 30 antes de mostrar el mantenimiento
         Al pasar los 30 kilos solo imorime los volumnes diarios posibles en cc */
         if (PESO > 30) {
         MANTENIMIENTO.style.display = 'none';
+        MEDIOMANTENIMIENTO.style.display= 'none';
         } else {
-        let mantenimiento = (flujo/24.0)*1.5;
-        MANTENIMIENTO.innerHTML = mantenimiento + 'cc/hr';
+        let mantenimiento = (flujo/24);
+        MANTENIMIENTO.innerHTML = 'Mantenimiento: ' +Math.round(mantenimiento) + 'cc/hr';
         MANTENIMIENTO.style.display = 'block';
+        let medio= flujo/24*1.5;
+        MEDIOMANTENIMIENTO.innerHTML= 'm+m/2: '+ Math.round(medio)+ 'cc/hr';
+        MEDIOMANTENIMIENTO.style.display= 'block';
         }
     } else {
         ERROR.style.display = 'block';
         FLUJO.style.display = 'none';
         MANTENIMIENTO.style.display = 'none';
+        MEDIOMANTENIMIENTO.style.display = 'none';
     }
-})
+   
+}
+
 /*Funcion que calcula la hidratacion segun el peso */
 function calcFlujo(peso){
     if(peso<=30){
@@ -57,7 +77,7 @@ function calculoHoliday(peso){
     }
     else if (peso>10){
         pesoRestante= peso-10;
-        resultado= FLUJO2+ (pesoRestante*10);
+        resultado= FLUJO2+ (pesoRestante*50);
         return resultado;
     }
     else{
