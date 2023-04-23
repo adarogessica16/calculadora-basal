@@ -29,7 +29,7 @@ CALCULAR.addEventListener('click', () => {
 })
 /*Funcion que calcula la hidratacion segun el peso */
 function calcFlujo(peso){
-    if(peso<30){
+    if(peso<=30){
         return calculoHoliday(peso);     
     } 
     else {
