@@ -47,35 +47,50 @@ body{
 }
 /*Para cambiar los estilos que estan por defecto en <input> y <button>*/
 input{
+
     width: 70%;
     padding: 12px 15px;
+    /*quita el borde*/
     border: none;
     background-color: #eee;
 }
 button {
     font-size: 12px;
+    /*ancho de la letra*/
       font-weight: bold;
+      /*espacio adentro*/
       padding: 12px 45px;
       border-radius: 30px;
       background-color: #ec6fea;
+      /*color de borde*/
       border: 1px solid #e98ceb;
+      /*color de la letra*/
       color: #FFFFFF;
+      /*Volver todo a mayuscula*/
       text-transform: uppercase;
+      /*espacio entre las letras*/
       letter-spacing: 1px;
+    /*tiempo que tarda la transicion*/
       transition: transform 20ms ease-in;
+      margin-top:20px;
   }
  button:active {
+    /*escala todo el elemento al hacer el click*/
 	transform: scale(0.95);
 }
 #error{
-    color: red;
+    background-color: #d460ca;
+    padding: 5px 15px;
+    color: rgb(225, 213, 225);
     font-weight: bold;
     display: none;
 }
 
 .resultado{
-    color: #0A81D1;
-    font-weight: bold;
+    background-color: #e25fe4;
+    border-radius: 0cqw;
+    color: #f6f6f6;
+    font-weight:500;
     font-size: 25px;
     margin-bottom: 5px;
     display: none;
