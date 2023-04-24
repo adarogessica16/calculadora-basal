@@ -29,7 +29,7 @@ body{
 }
 
 #Detalle{
-    background: white;
+    background: hsl(0, 0%, 100%);
     background-image: url(https://img.kango-roo.com/upload/images/ki/nurse-index-finger-question-thumbnail.jpg);
     background-repeat: no-repeat;
     background-position:bottom right;
