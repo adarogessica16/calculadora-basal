@@ -8,7 +8,7 @@ body{
 }
 
 #Contenedor{
-    width: 900px;
+    width: 1000px;
     height: 500px;
     background-color: rgb(231, 146, 232);
     text-align: center;
@@ -21,7 +21,7 @@ body{
       0 10px 10px rgba(0,0,0,0.22);
 } 
 #calculadora{
-    background: rgb(238, 218, 242);
+    background: rgb(220, 171, 228);
     /* Hacer que los divs queden lado a lado */
     width:  50%;
     height: 100%;
@@ -29,12 +29,15 @@ body{
 }
 
 #Detalle{
-    background: #ba5dd4;
+    background: white;
+    background-image: url(https://img.kango-roo.com/upload/images/ki/nurse-index-finger-question-thumbnail.jpg);
+    background-repeat: no-repeat;
+    background-position:bottom right;
     /* Hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
     float: left;
-    color: #f6f5f7;
+    color: #9465cd;
 }
 
 .contenido{
@@ -45,6 +48,14 @@ body{
  overflow: hidden;
  padding: 40px;
 
+}
+.contenido2{
+    /* Centrar el contenido verticalmente dentro de cada div */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+    overflow: hidden;
+    padding: 50px;
 }
 /*Para cambiar los estilos que estan por defecto en <input> y <button>*/
 input{
